@@ -19,4 +19,11 @@ public class SolutionTest {
         Assert.assertEquals(0,solution.myAtoi("words and 987"));
         Assert.assertEquals(-2147483648,solution.myAtoi("-91283472332"));
     }
+
+    @Test
+    public void isPalindrome(){
+        Assert.assertEquals(true,solution.isPalindrome(121));
+        Assert.assertEquals(false,solution.isPalindrome(-121));
+        Assert.assertEquals(false,solution.isPalindrome(10));
+    }
 }

@@ -43,4 +43,25 @@ public class Solution {
 
         return (int)resultNumber;
     }
+
+    //https://leetcode.com/problems/palindrome-number/
+    public boolean isPalindrome(int x) {
+        int originalInput = x;
+        if(x<0){
+            return false;
+        }
+
+        int revNumber=0;
+
+        while(x!=0){
+            revNumber *= 10;
+            revNumber += x%10;
+            x = x/10;
+        }
+
+        if(revNumber==originalInput){
+            return true;
+        }
+        return false;
+    }
 }
